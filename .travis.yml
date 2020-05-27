@@ -4,4 +4,3 @@ dart_task:
   - test: --platform chrome
   - dartfmt : true
   - dartanalyzer : true
-
