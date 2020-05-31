@@ -16,8 +16,8 @@ jobs:
     - stage: test
       if: branch = master
       script: ./flutter/bin/flutter test
-      dart_task:
-        - dartfmt
+    - stage: format
+      script: dartfmt
 
 cache:
   directories:
