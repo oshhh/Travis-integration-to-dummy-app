@@ -11,13 +11,13 @@ addons:
 before_script:
   - git clone https://github.com/flutter/flutter.git -b beta
   - ./flutter/bin/flutter doctor
-dart_task:
-  - dartfmt: true
 jobs:
   include:
     - stage: test
       if: branch = master
       script: ./flutter/bin/flutter test
+      dart_task:
+        - dartfmt
 
 cache:
   directories:
