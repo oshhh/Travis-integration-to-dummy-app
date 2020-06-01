@@ -15,7 +15,7 @@ jobs:
   include:
     - stage: test
       if: branch = master
-      script: (cd folder) && (./flutter/bin/flutter test)
+      script: cd folder; ./flutter/bin/flutter test;
     - stage: format
       script: ./flutter/bin/flutter format -n --set-exit-if-changed folder/lib/*
 
