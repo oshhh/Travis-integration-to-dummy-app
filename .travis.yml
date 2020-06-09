@@ -17,6 +17,7 @@ jobs:
       if: event = pr
       script: ls;cd folder;ls;../flutter/bin/flutter test;
     - stage: format
+      if: event = pr
       script: ./flutter/bin/flutter format -n --set-exit-if-changed folder/lib/*
 
 cache:
