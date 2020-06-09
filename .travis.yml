@@ -14,7 +14,7 @@ before_script:
 jobs:
   include:
     - stage: test
-      if: branch = master
+      if: event = pr
       script: ls;cd folder;ls;../flutter/bin/flutter test;
     - stage: format
       script: ./flutter/bin/flutter format -n --set-exit-if-changed folder/lib/*
